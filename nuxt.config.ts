@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   ssr: false,
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
+  nitro: {
+    preset: 'static'  // ✅ add this!
+  },
 
   modules: [
     '@nuxt/content',
