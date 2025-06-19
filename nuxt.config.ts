@@ -1,10 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   nitro: {
-    preset: 'static'  // ✅ add this!
+    preset: 'static', // ✅ ensure static output
+    prerender: {
+      routes: ['/'] // or any page routes you want to pre-render
+    }
   },
 
   modules: [
